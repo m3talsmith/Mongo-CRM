@@ -14,5 +14,6 @@ RebelFoundation::Application.routes.draw do
   match '/auth/:provider/callback'  => 'user_session#create'
   match '/auth/failure'             => 'user_session#failure'
 
+  resource :leads
   root to: 'pages#index'
 end

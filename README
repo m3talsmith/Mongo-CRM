@@ -8,6 +8,8 @@ We've left this completely authentication agnostic since that is very much in fl
 
 Every model you generate will a proper Mongoid Document and proper factory, all tests generated will be rspec tests, and there won't as much useless crap generated.
 
+Mongo_CRM is an adaptation of our Rebel Foundation.  It is a work in progress.
+
 == Instructions
 
 For those rvm users we've included a rvmrc. Just:
