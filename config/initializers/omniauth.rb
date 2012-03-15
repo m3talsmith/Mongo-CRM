@@ -15,11 +15,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     provider_keys[Rails.env]['twitter']['consumer_secret']
   )
 
-  provider(
-    :google_oauth2,
-    provider_keys[Rails.env]['google']['consumer_key'],
-    provider_keys[Rails.env]['google']['consumer_secret']
-  )
 
   provider :identity, model: User,
     on_failed_registration: lambda { |env| UsersController.action(:new).call(env) }
