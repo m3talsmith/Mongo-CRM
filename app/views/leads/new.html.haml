@@ -1,0 +1,27 @@
+.form.well
+  .label
+    %h2
+      Create New Lead
+  %h3
+    Please enter the following information.
+  %br
+  = form_for @lead do |f|
+    %p
+      = f.label 'First name'
+      = f.text_field :first_name
+    %p
+      = f.label 'Last name'
+      = f.text_field :last_name
+    %p
+      = f.label 'Phone'
+      = f.text_field :phone
+    %p
+      = f.label 'Email'
+      = f.text_field :email
+    %p
+      = f.label 'Company'
+      = f.text_field :company
+    %p
+      = select_tag 'interested_in', options_for_select(['Web Application'])
+    %p
+      = f.submit

@@ -16,7 +16,7 @@ describe 'UserSession' do
 
     before do
       visit new_user_path
-
+      debugger
       fill_in 'name',                   with: 'Test User'
       fill_in 'email',                  with: 'test@example.com'
       fill_in 'password',               with: 'password'

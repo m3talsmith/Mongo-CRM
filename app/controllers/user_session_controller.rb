@@ -6,7 +6,11 @@ class UserSessionController < ApplicationController
     user = User.find(request.env['omniauth.auth']['uid']) if request.env['omniauth.auth']
     if user
       session[:user_id] = user.id
-      redirect_to dashboard_path, notice: 'Welcome back!'
+        if params[:commit] == 'Create User'
+          redirect_to user_path user
+        else
+          redirect_to dashboard_path, notice: 'Welcome back!'
+        end
     end
   end
 

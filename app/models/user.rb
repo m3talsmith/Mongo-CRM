@@ -7,6 +7,7 @@ class User
 
   field :email, type: String
   field :name, type: String
+  field :company
   field :password_digest, type: String
   field :token
   
