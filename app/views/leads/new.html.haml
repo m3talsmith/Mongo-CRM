@@ -24,4 +24,9 @@
     %p
       = select_tag 'interested_in', options_for_select(['Web Application'])
     %p
+      = f.label 'Comments'
+      = f.text_area :comments
+    %p
+      = select_tag 'lead_status', options_for_select(['Web Lead'])
+    %p
       = f.submit

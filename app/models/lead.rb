@@ -7,4 +7,8 @@ class Lead
   field :email
   field :company
   field :interested_in
+  field :comments
+  field :lead_status
+  field :lead_source
+  field :assigned_to
 end
