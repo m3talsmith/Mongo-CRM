@@ -21,7 +21,7 @@
         - flash.each do |alert_type, message|
           = content_tag :article, class: "alert-message #{alert_type}" do
             = message
-    %section
+    %section.container-liquid
       - if @current_user
         .tabbable
           %ul.nav.nav-tabs
@@ -37,5 +37,9 @@
               = link_to 'Contacts'
             %li.btn
               = link_to 'Opportunities'
-      = yield
-
+        .span3#sidebar
+          = yield :sidebar
+        .span9#content
+          = yield
+      - else
+        = yield
